@@ -1,0 +1,17 @@
+
+// allows the user to add a student, their ID, and grade (score and letter grade equivalent).
+void addStudent()
+
+// allows the user to update the information of an existing student. If the student does not exist 
+// in the structure, display that “user does not exist in file.” If the student does exist, ask what 
+// to update and update that info accordingly.
+void updateStudent()
+
+// allows the user to remove a student.
+void deleteStudent()
+
+// determine whether a student exists or not
+void findStudent()
+
+// display the list of students available. It will display each student’s name, ID and grade.
+void listStudents()
