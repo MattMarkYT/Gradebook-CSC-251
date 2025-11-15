@@ -2,7 +2,7 @@
 typedef struct Student
 {
 	int ID;
-	char[128] name;
+	char[] name;
 	double grade;
 };
 
