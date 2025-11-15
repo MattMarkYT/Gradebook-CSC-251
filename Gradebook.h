@@ -1,3 +1,12 @@
+// Student Data Type
+typedef struct Student
+{
+	int ID;
+	char[128] name;
+	double grade;
+};
+
+/* Run From Main */
 
 // allows the user to add a student, their ID, and grade (score and letter grade equivalent).
 void addStudent();
@@ -16,10 +25,12 @@ void findStudent();
 // display the list of students available. It will display each student’s name, ID and grade.
 void listStudents();
 
-// Student Data Type
-typedef struct Student
-{
-	int ID;
-	char[128] name;
-	double grade;
-};
+/* Run From FileHandler/Sorter */
+
+// Sets the Gradebook Student array
+void setGradebook(Student[] studentsArray);
+
+// Gets the Gradebook Student array
+Student[] getGradebook();
+
+
