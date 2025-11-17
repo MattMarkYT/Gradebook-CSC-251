@@ -4,7 +4,7 @@
 #include "Gradebook.h"
 
 //might take this method out 
-//Prints Student info
+//Prints inputed Student info
    void printStudent(Student s)
 {  
   printf("Name: %s\n", s.name);
@@ -24,6 +24,7 @@ int main(){
   printf("Enter student(s) grade: ");
 //  scanf("%lf", &s.grade);
 
+// will add more error handling later
 // proper input handling for the grade
     if (s.grade < 0.0 || s.grade > 100.0)
     {
