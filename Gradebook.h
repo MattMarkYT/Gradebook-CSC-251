@@ -7,14 +7,6 @@ typedef struct Student
 };
 
 /* Run From Main */
-printf("Enter students name(s):");
-//scanf(); this is where the scan function should be
-
-printf("Enter student ID's:");
-//scanf();
-
-printf("Enter grade(s):");
-//scanf();
 
 // allows the user to add a student, their ID, and grade (score and letter grade equivalent).
 void addStudent();
