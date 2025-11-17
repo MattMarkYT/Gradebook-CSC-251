@@ -1,18 +1,9 @@
 #ifndef STATS_H
 #define STATS_H
 
-# include "Gradebook.h" // We include this so that we have access to the struct "Student".
+#include "gradebook.h"
 
 // 1. display the statistics of the class all at once (Reason: avoid unnecessary function calls)
-void ComputeStats(Student s); // must pass struct Student, so that we can pass it to the functions inside this one
-
-// 2. Mean function --> Calculates the average of all grades
-double mean(Student s);
-
-// 3. Minimum --> Finds the lowest grade of all students
-double min(Student s);
-
-// 4. Maximum --> Finds the highest grade of all students
-double max(Student s);
-
+void ComputeStats(); // must pass struct Student, so that we can pass it to the functions inside this one
+		     // in this case, we are passing by value. This is a no arg because we do not want dependency on inputting the struct array.
 #endif
