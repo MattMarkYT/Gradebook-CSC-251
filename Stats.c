@@ -16,13 +16,13 @@ void computeStats() // no arg for simplicity
 // 2. Get the mean grade
 static double mean(Student s[])
 {
-  double avgGrade, sum;
+  double avgGrade, sum = 0;
   int sizeOfClass = getSize();
   
   // loop through the entire struct (aka the array of students), which will allow us to obtain the sum of all grades
   for (int i = 0; i < sizeOfClass; i++)
   {
-    sum += s[0].grade;
+    sum += s[i].grade;
   }
   
   // compute the average grade --> the average is the sum of all grades divided by the total number of students
