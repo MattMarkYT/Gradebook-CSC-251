@@ -3,6 +3,7 @@
 #include <stdlib.h>
 #include "Gradebook.h"
 
+//might take this method out 
 //Prints Student info
    void printStudent(Student s)
 {  
@@ -19,11 +20,11 @@ int main(){
   printf("Enter the student(s) name: ");
 //  scanf("%c", &s.name);
   printf("Enter student(s) ID: ");
-  //scanf("%d", &s.ID;
+//  scanf("%d", &s.ID;
   printf("Enter student(s) grade: ");
 //  scanf("%lf", &s.grade);
 
-   // Validate grade range
+// proper input handling for the grade
     if (s.grade < 0.0 || s.grade > 100.0)
     {
         fprintf(stderr, "Error: Grade must be between 0 and 100.\n");
