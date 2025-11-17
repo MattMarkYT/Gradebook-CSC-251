@@ -59,8 +59,7 @@ int main(void) {
                 break;
 
             case 7: {
-                Student tempStudent; /*computestats needs a student parameter so i made tempstudent to pass*/
-                ComputeStats(tempStudent);
+                computeStats();
                 break;
             }
 
