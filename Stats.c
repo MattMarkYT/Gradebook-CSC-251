@@ -26,7 +26,7 @@ static double mean(Student s[])
   }
   
   // compute the average grade --> the average is the sum of all grades divided by the total number of students
-  avgGrade = sum / (double) sizeOfClass();
+  avgGrade = sum / (double) sizeOfClass;
 
   return avgGrade;
 }
