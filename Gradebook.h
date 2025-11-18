@@ -1,7 +1,7 @@
 // Student Data Type
 typedef struct Student
 {
-	char[128] name;
+	char name[128];
 	int ID;
 	double grade;
 };
