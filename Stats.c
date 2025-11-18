@@ -21,6 +21,12 @@ static double mean(Student s[])
   double avgGrade, sum = 0;
   int sizeOfClass = getSize();
   
+  if (sizeOfClass == 0) // edge case handling --> when size = 0
+  {
+    printf("Error! The gradebook has no students.\n");
+    return 0;
+  }
+
   // loop through the entire struct (aka the array of students), which will allow us to obtain the sum of all grades
   for (int i = 0; i < sizeOfClass; i++)
   {
@@ -38,6 +44,12 @@ static double min(Student s[])
 {
   double lowestGrade = s[0].grade; // for initialization, the lowest grade is at index 0. However, this will be changed by comparing to all the other students.
   int sizeOfClass = getSize();
+  if (sizeOfClass == 0) // edge case handling --> when size = 0
+  {
+    printf("Error! The gradebook has no students.\n");
+    return 0;
+  }
+
   // loop through the entire class, and compare the previous student to the next to see which has a lower grade. The lower grade of the two for that iteration
   // is the new min.
   for (int i = 1; i < sizeOfClass; i++)
@@ -57,6 +69,12 @@ static double max(Student s[])
   double highestGrade = s[0].grade // for initialization, assume the highest grade is at index 0. This will change as we compare to all students in the database
   int sizeOfClass = getSize();
   
+  if (sizeOfClass == 0) // edge case handling --> when size = 0
+  {
+    printf("Error! The gradebook has no students.\n");
+    return 0;
+  }
+
   // loop through the entire class, and compare the previous student to the next. The higher grade of the two is the new highest grade.
   for (int i = 1; i < sizeOfClass; i++)
   {
