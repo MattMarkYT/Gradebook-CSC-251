@@ -3,6 +3,10 @@
 #include <stdlib.h>
 #include "Gradebook.h"
 
+
+int size;
+
+
 //might take this method out 
 //Prints inputed Student info
    void printStudent(Student s)
