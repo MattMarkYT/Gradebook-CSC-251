@@ -4,7 +4,7 @@ typedef struct Student
 	char name[128];
 	int ID;
 	double grade;
-};
+} Student;
 
 /* Run From Main */
 
@@ -28,9 +28,9 @@ void listStudents();
 /* Run From FileHandler/Sorter */
 
 // Sets the Gradebook Student array
-void setGradebook(Student[] studentsArray);
+void setGradebook(int size, Student* studentsArray);
 
 // Gets the Gradebook Student array
-Student[] getGradebook();
+Student* getGradebook();
 
 
