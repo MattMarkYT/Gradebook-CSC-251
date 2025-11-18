@@ -16,6 +16,8 @@ void save(){
 	fwrite(&size, sizeOf(int), 1, gradebookFile);			// Write size to file
 	fwrite(buffer, sizeOf(Student), size, gradebookFile);	// Write students to file
 
+	fclose(gradebookFile);
+
 }
 
 void load(){
@@ -29,5 +31,7 @@ void load(){
 	fread(&stuArray, sizeOf(Student), size, gradebookFile);
 
 	setGradebook(stuArray);
+
+	fclose(gradebookFile);
 
 }
