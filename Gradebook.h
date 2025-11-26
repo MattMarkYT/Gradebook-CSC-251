@@ -42,7 +42,9 @@ void listStudents();
 void setGradebook(int size, Student* studentsArray);
 
 // Gets the Gradebook Student array
-// Notes:	Use malloc to create a copy of the array (Advanced method so feel free to ask questions)
+// Notes:	Use a static array in the function to create a copy of the array 
+//			(A nonstatic local variable would automatically be freed from memory at the end of function so it would return a null array)
 Student* getGradebook();
 
-
+// Gets the size of the gradebook
+int getSize();
