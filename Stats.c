@@ -1,6 +1,6 @@
 #include "Stats.h"
 #include <stdio.h> // We used printf for computeStats
-#include "gradebook.h"
+#include "Gradebook.h"
 
 // 1. Display all the statistical analysis
 void computeStats() // no arg for simplicity

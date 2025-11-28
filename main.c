@@ -10,7 +10,7 @@ void printMenu(void);
 int main(void) {
     int usersChoice = -1;
 
-	Load();   /* loads the data */
+//	Load();   /* loads the data */
 
 	while (usersChoice != 0) {
 
@@ -40,7 +40,7 @@ int main(void) {
             case 2:
                 listStudents();
                 break;
-
+/*
             case 3:
                 findStudent();
                 break;
@@ -72,15 +72,13 @@ int main(void) {
                 Save();
                 printf("Goodbye\n");
                 break;
-
+*/
             default:
                 printf("Invalid option.\n");
                 break;
         }
-
         printf("\n");
     }
-
     return 0;
 }
 
@@ -95,5 +93,4 @@ void printMenu(void) {
     printf("7. Show Statistics\n");
     printf("8. Save\n");
     printf("0. Exit\n");
-    
 }
