@@ -136,7 +136,7 @@ void findStudent()
   }
 }
 
-// 3.5.
+// 4.
 void deleteStudent(){
   int studentID;
   //prints empty if there are no students
@@ -175,7 +175,7 @@ printf("Student ID %d has now been deleted.\n", studentID);
 }
 
 
-// 4. Listing Students
+// 5. Listing Students
 void listStudents()
 {
   printf("LIST OF STUDENTS\n");
