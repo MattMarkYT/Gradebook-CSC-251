@@ -136,7 +136,7 @@ void findStudent()
   }
 }
 
-// 4.
+// 4. deleting a student
 void deleteStudent(){
   int studentID;
   //prints empty if there are no students
