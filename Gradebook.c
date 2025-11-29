@@ -111,7 +111,7 @@ void findStudent()
     printf("The gradebook is empty currently");
     return;
   }
-  printf("Please enter the student's ID number: ");
+  printf("Please enter the student's ID: ");
   scanf("%d", &studentID);
 
   while (studentID < 0) {
@@ -132,7 +132,7 @@ void findStudent()
     }
   }
   if (!found) {
-    printf("Student with ID %d was not found in the gradebook.\n", studentID);
+    printf("Student ID %d not found in the gradebook.\n", studentID);
   }
 }
 
