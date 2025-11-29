@@ -163,15 +163,15 @@ void deleteStudent(){
 
   //not found
   if (index == -1) {
-    printf("Student with ID %d not found.\n", studentID);
+    printf("Student ID %d not found.\n", studentID);
     return;
   }
   // found -> delete by shifting array left
   for (int i = index; i < size - 1; i++) {
-    studentArray[i] = studentArray[i +1];
+    studentArray[i] = studentArray[i + 1];
   }
   size --; // one less student now 
-printf("Student with ID %d has now been deleted.\n", studentID);
+printf("Student ID %d has now been deleted.\n", studentID);
 }
 
 
