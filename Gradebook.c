@@ -119,7 +119,7 @@ void findStudent()
     printf("Please re-enter the student's ID number: ");
     scanf("%d", &studentID);
   }
-  //seaching for students
+  //seaching for student
   int found = 0;
   for (int i = 0; i < size; i++) {
     if (studentArray[i].ID == studentID) {
