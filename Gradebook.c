@@ -103,7 +103,38 @@ void updateStudent()
 
 
 // 3. Finding a Student
+void findStudent()
+{
+  //if the there are no students, prints empty
+  int studentID;
+  if (size == 0) {
+    printf("The gradebook is empty currently");
+    return;
+  }
+  printf("Please enter the student's ID number: ");
+  scanf("%d", &studentID);
 
+  while (studentID < 0) {
+    printf("Error: ID cannot be negative.\n");
+    printf("Please re-enter the student's ID number: ");
+    scanf("%d", &studentID);
+  }
+  //seaching for students
+  int found = 0;
+  for (int i = 0; i < size; i++) {
+    if (studentArray[i].ID == studentID) {
+      found = 1;
+      printf("Student found in gradebook.\n");
+      printf("Name: %s\n", studentArray[i].name);
+      printf("ID: %d\n", studentArray[i].ID);
+      printf("Grade: %.2f\n", studentArray[i].grade);
+      break;
+    }
+  }
+  if (!found) {
+    printf("Student with ID %d was not found in the gradebook.\n", studentID);
+  }
+}
 
 
 
