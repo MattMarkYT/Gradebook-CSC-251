@@ -108,7 +108,7 @@ void findStudent()
   //if the there are no students, prints empty
   int studentID;
   if (size == 0) {
-    printf("The gradebook is empty currently");
+    printf("gradebook is empty");
     return;
   }
   printf("Please enter the student's ID: ");
@@ -136,7 +136,43 @@ void findStudent()
   }
 }
 
+// 3.5.
+void deleteStudent(){
+  int studentID;
+  //prints empty if there are no students
+  if (size == 0) {
+    printf("gradebook is empty.\n");
+    return;
+  }
 
+  printf("Enter the student's ID you want to delete");
+  scanf("%d", &studentID);
+
+  while (studentID < 0) {
+    printf("Error: ID cannot be negative.\n");
+    printf("Please re-enter the student's ID number: ");
+    scanf("%d", &studentID);
+  }
+  int index = -1;
+  for (int i = 0; i < size; i++){
+    if (studentArray[i].ID == studentID) {
+      index = i;
+      break;
+    }
+  }
+
+  //not found
+  if (index == -1) {
+    printf("Student with ID %d not found.\n", studentID);
+    return;
+  }
+  // found -> delete by shifting array left
+  for (int i = index; i < size - 1; i++) {
+    studentArray[i] = studentArray[i +1];
+  }
+  size --; // one less student now 
+printf("Student with ID %d has now been deleted.\n", studentID);
+}
 
 
 // 4. Listing Students
