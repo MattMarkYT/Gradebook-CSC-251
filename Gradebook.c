@@ -123,12 +123,7 @@ void updateStudent()
     printf("Student has successfully been updated.\n");
   else
     printf("No student has the matching ID number.");
-  return 0;
-
 } 
-
-
-
 
 // 3. Finding a Student
 void findStudent()
@@ -218,27 +213,34 @@ void listStudents()
 }
 
 
-
-
-
 /* Setting and Getting Gradebook */
 
 /* THIS IS INCOMPLETE, NEED TO WORK ON IT
-void setGradebook(int size, Student* studentsArray) {
+void setGradebook(int size, Student* studentsArray)
+{
   if (size == 0) // edge case: the gradebook is empty                          
   { 
     printf("Error: The gradebook is empty.\n");
   }
-  else {        // The gradebook has at least one student inside
+  else
+  {        // The gradebook has at least one student inside
     for (int i = 0; i < size; i++)
     {
-      *studentsArray[i]
+      studentArray[i].name = *studentsArray[i].name;
+      studentArray[i].ID = *studentsArray[i].ID;
+      studentArray[i].grade = *studentsArray[i].grade;
     }
-  
-
   }
 
-} */
+void setGradebook(int size, Student* studentsArray);
+
+
+// Gets the size of the gradebook
+int getSize()
+{
+  return size;
+} 
+*/
 
 
 
