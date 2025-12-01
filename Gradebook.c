@@ -82,20 +82,48 @@ void updateStudent()
   }
   
   // Search for user through the list
+  int selection = 'x';
+  int changeSuccess = 0;
   for (int i = 0; i < size; i++)
   {
-    if (studentArray[size].ID == studentID)
+    if (studentArray[i].ID == studentID)
     {
       printf("Student has been found in the gradebook.\n");
      
       // Ask user if they would like to change the student's name
       printf("Would you like to change the student's name? Enter [Y/N]: ");
-      
+      scanf("%d", &selection");
+      if (selection = 'Y' || selection == 'y')
+      {
+        printf("Please enter the student's new name: ");
+        scanf(" %127[^\n]", &studentArray[i].name);
+      }
+
       // Ask the user if they would like to change the student's grade
       printf("Would you like to change the student's grade? Enter [Y/N]: ");
-
+      scanf("%d", &selection");
+      if (selection = 'Y' || selection == 'y')
+      {
+        printf("Please enter the student's new grade: ");
+        scanf("%lf", &studentArray[i].grade");
+        while (grade < 0.0 || grade > 100.0) // if grade goes out of bounds
+        {
+          printf("Error: Grade is out-of-bounds.\n");
+          printf("Please re-enter the student's new grade: ");
+          scanf("%lf", &studentArray[i].grade);
+        }
+      }
+      changeSuccess = 1;
+      break;
     }
   }
+  
+  // Verification and No Matching User
+  if (changeSuccess)
+    printf("Student has successfully been updated.\n");
+  else
+    printf("No student has the matching ID number.");
+  return 0;
 
 } 
 
