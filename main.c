@@ -40,7 +40,7 @@ int main(void) {
             case 2:
                 listStudents();
                 break;
-/*
+
             case 3:
                 findStudent();
                 break;
@@ -72,7 +72,7 @@ int main(void) {
                 Save();
                 printf("Goodbye\n");
                 break;
-*/
+
             default:
                 printf("Invalid option.\n");
                 break;
