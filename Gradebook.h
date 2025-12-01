@@ -39,7 +39,7 @@ void listStudents();
 // Sets the Gradebook Student array
 // Notes: 	Copy all the elements from the argument array to gradebook's array
 // 			Make sure size isn't above the max limit (clamp)
-void setGradebook(int size, Student* studentsArray);
+void setGradebook(int s, Student* newStudents);
 
 // Gets the Gradebook Student array
 // Notes:	Use a static array in the function to create a copy of the array 

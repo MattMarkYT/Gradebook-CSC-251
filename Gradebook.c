@@ -214,20 +214,15 @@ void listStudents()
 /* Setting and Getting Gradebook */
 
 /* THIS IS INCOMPLETE, NEED TO WORK ON IT
-void setGradebook(int size, Student* studentsArray)
+void setGradebook(int s, Student* newStudents)
 {
-  if (size == 0) // edge case: the gradebook is empty                          
-  { 
-    printf("Error: The gradebook is empty.\n");
-  }
-  else
-  {        // The gradebook has at least one student inside
-    for (int i = 0; i < size; i++)
-    {
-      studentArray[i].name = *studentsArray[i].name;
-      studentArray[i].ID = *studentsArray[i].ID;
-      studentArray[i].grade = *studentsArray[i].grade;
-    }
+  size = s;
+  // The gradebook has at least one student inside
+  for (int i = 0; i < size; i++)
+  {
+      studentArray[i].name = newStudents[i].name;
+      studentArray[i].ID = newStudents[i].ID;
+      studentArray[i].grade = newStudents[i].grade;
   }
 
 Student* getGradebook();
