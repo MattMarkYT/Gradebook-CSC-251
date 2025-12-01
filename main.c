@@ -64,7 +64,7 @@ int main(void) {
             }
 
             case 8:
-                Save();
+                save();
                 printf("Gradebook has been saved.\n");
                 break;
 
