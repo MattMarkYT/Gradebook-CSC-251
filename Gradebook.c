@@ -34,6 +34,7 @@ void addStudent()
         printf("Error: ID is already being used by another student.\n");
         printf("Please re-enter the student's ID number: ");
         scanf("%d", &ID);
+        continue;
       }
     }
   
@@ -43,12 +44,9 @@ void addStudent()
     printf("Error: ID cannot be negative.\n");
     printf("Please re-enter the student's ID number: ");
     scanf("%d", &ID);
+    continue;
     }
-
-    if (studentArray[i].ID != ID && ID > 0) 
-    {
       break; 
-    }
   }   
   studentArray[size].ID = ID;
 
@@ -232,7 +230,7 @@ void setGradebook(int size, Student* studentsArray)
     }
   }
 
-void setGradebook(int size, Student* studentsArray);
+Student* getGradebook();
 
 
 // Gets the size of the gradebook
@@ -241,7 +239,6 @@ int getSize()
   return size;
 } 
 */
-
 
 
 
