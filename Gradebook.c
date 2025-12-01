@@ -106,7 +106,7 @@ void updateStudent()
       {
         printf("Please enter the student's new grade: ");
         scanf("%lf", &studentArray[i].grade);
-        while (grade < 0.0 || grade > 100.0) // if grade goes out of bounds
+        while (studentArray[i].grade < 0.0 || studentArray[i].grade > 100.0) // if grade goes out of bounds
         {
           printf("Error: Grade is out-of-bounds.\n");
           printf("Please re-enter the student's new grade: ");
