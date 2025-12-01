@@ -5,10 +5,9 @@
 // 1. Display all the statistical analysis
 void computeStats() // no arg for simplicity
 {
-  // note: getStudents() comes from Gradebook file. This contains the array itself
-  double meanGrade = mean(getStudents());
-  double minGrade = min(getStudents());
-  double maxGrade = max(getStudents()));
+  double meanGrade = mean(getGradebook());
+  double minGrade = min(getGradebook());
+  double maxGrade = max(getGradebook());
 
   printf("Average grade for this course: %.2f\n", meanGrade);
   printf("Lowest grade for this course: %.2f\n", minGrade);
@@ -16,7 +15,7 @@ void computeStats() // no arg for simplicity
 }
 
 // 2. Get the mean grade
-static double mean(Student s[])
+static double mean(Student* s)
 {
   double avgGrade, sum = 0;
   int sizeOfClass = getSize();
@@ -40,7 +39,7 @@ static double mean(Student s[])
 }
 
 // 3. Get the lowest grade
-static double min(Student s[])
+static double min(Student* s)
 {
   double lowestGrade = s[0].grade; // for initialization, the lowest grade is at index 0. However, this will be changed by comparing to all the other students.
   int sizeOfClass = getSize();
@@ -64,7 +63,7 @@ static double min(Student s[])
 }
 
 // 4. Get the highest grade
-static double max(Student s[])
+static double max(Student* s)
 {
   double highestGrade = s[0].grade // for initialization, assume the highest grade is at index 0. This will change as we compare to all students in the database
   int sizeOfClass = getSize();
