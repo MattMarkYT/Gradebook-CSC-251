@@ -69,7 +69,7 @@ int main(void) {
                 break;
 
             case 0:
-                Save();
+                save();
                 printf("Goodbye\n");
                 break;
 
