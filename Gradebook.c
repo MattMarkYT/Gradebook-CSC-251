@@ -92,7 +92,7 @@ void updateStudent()
      
       // Ask user if they would like to change the student's name
       printf("Would you like to change the student's name? Enter [Y/N]: ");
-      scanf("%d", &selection");
+      scanf("%d", &selection);
       if (selection = 'Y' || selection == 'y')
       {
         printf("Please enter the student's new name: ");
@@ -101,11 +101,11 @@ void updateStudent()
 
       // Ask the user if they would like to change the student's grade
       printf("Would you like to change the student's grade? Enter [Y/N]: ");
-      scanf("%d", &selection");
+      scanf("%d", &selection);
       if (selection = 'Y' || selection == 'y')
       {
         printf("Please enter the student's new grade: ");
-        scanf("%lf", &studentArray[i].grade");
+        scanf("%lf", &studentArray[i].grade);
         while (grade < 0.0 || grade > 100.0) // if grade goes out of bounds
         {
           printf("Error: Grade is out-of-bounds.\n");
