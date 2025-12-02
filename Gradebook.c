@@ -98,15 +98,19 @@ void updateStudent()
       scanf("%d", &selection);
       if (selection = 'Y' || selection == 'y')
       {
+        scanf("%d", &selection);
         printf("Please enter the student's new name: ");
         scanf(" %127[^\n]", &studentArray[i].name);
       }
+      else
+        scanf("%d", &selection);
 
       // Ask the user if they would like to change the student's grade
       printf("Would you like to change the student's grade? Enter [Y/N]: ");
       scanf("%d", &selection);
       if (selection = 'Y' || selection == 'y')
       {
+        scanf("%d", &selection);
         printf("Please enter the student's new grade: ");
         scanf("%lf", &studentArray[i].grade);
         while (studentArray[i].grade < 0.0 || studentArray[i].grade > 100.0) // if grade goes out of bounds
@@ -116,6 +120,8 @@ void updateStudent()
           scanf("%lf", &studentArray[i].grade);
         }
       }
+      else
+        scanf("%d", &selection);
       changeSuccess = 1;
       break;
     }
@@ -232,7 +238,6 @@ void setGradebook(int s, Student* newStudents)
 Student* getGradebook(){
   static Student sendArray[GRADEBOOK_CAPACITY];
 
-Student* getGradebook();
   for (int i = 0; i < size; i++){
     sendArray[i].ID = studentArray[i].ID;
     strcpy(sendArray[i].name, studentArray[i].name);
