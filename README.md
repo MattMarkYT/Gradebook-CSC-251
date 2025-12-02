@@ -65,8 +65,9 @@ Users will first be prompted to enter a number from 0-8 in the menu. Each number
 ------------------------------------------------------------------------------
 ## Work Breakdown
 Matthew Marquez - Team Leader
-- Oversaw project logic and functions
+- Guided the creation of project structure and oversaw logic
 - Implemented FileHandler.c and FileHandler.h
+- in Gradebook.c, implemented getGradebook()
 
 Kristopher Manalang 
 - implemented Stats.h and Stats.c
