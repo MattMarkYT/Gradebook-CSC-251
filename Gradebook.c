@@ -16,6 +16,11 @@ void addStudent()
   int ID;
   double grade;
   
+  if (size == GRADEBOOK_CAPACITY)
+  {
+    printf("You can no longer add students to this gradebook. The gradebook is full.\n");
+    return;
+  }  
   // Ask for student's name
   printf("Please enter the student's name: ");
   scanf(" %127[^\n]", studentArray[size].name); // prompt user for name (up to 127 characters besides newline, so we can add last names)
@@ -213,30 +218,19 @@ void listStudents()
 
 /* Setting and Getting Gradebook */
 
+/* THIS IS INCOMPLETE, NEED TO WORK ON IT
 void setGradebook(int s, Student* newStudents)
 {
   size = s;
   // The gradebook has at least one student inside
   for (int i = 0; i < size; i++)
   {
-      strcpy(studentArray[i].name, newStudents[i].name);
+      studentArray[i].name = newStudents[i].name;
       studentArray[i].ID = newStudents[i].ID;
       studentArray[i].grade = newStudents[i].grade;
   }
-}
 
-Student* getGradebook(){
-  static Student sendArray[GRADEBOOK_CAPACITY];
-
-  for (int i = 0; i < size; i++){
-    sendArray[i].ID = studentArray[i].ID;
-    strcpy(sendArray[i].name, studentArray[i].name);
-    sendArray[i].grade = studentArray[i].grade;
-  }
-
-  return sendArray;
-
-}
+Student* getGradebook();
 
 
 // Gets the size of the gradebook
@@ -244,6 +238,7 @@ int getSize()
 {
   return size;
 } 
+*/
 
 
 
