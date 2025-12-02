@@ -85,7 +85,7 @@ void updateStudent()
   }
   
   // Search for user through the list
-  int selection = 'x';
+  char selection = 'x';
   int changeSuccess = 0;
   for (int i = 0; i < size; i++)
   {
@@ -94,23 +94,19 @@ void updateStudent()
       printf("Student has been found in the gradebook.\n");
      
       // Ask user if they would like to change the student's name
-      printf("Would you like to change the student's name? Enter [Y/N]: ");
-      scanf("%d", &selection);
+      printf("Would you like to change the student's name? Enter [Y] to confirm, or enter any other letter to continue: ");
+      scanf(" %c", &selection);
       if (selection == 'Y' || selection == 'y')
       {
-        scanf("%d", &selection);
         printf("Please enter the student's new name: ");
         scanf(" %127[^\n]", studentArray[i].name);
       }
-      else
-        scanf("%d", &selection);
 
       // Ask the user if they would like to change the student's grade
-      printf("Would you like to change the student's grade? Enter [Y/N]: ");
-      scanf("%d", &selection);
+      printf("Would you like to change the student's grade? Enter [Y] to confirm, or enter any other letter to continue: ");
+      scanf(" %c", &selection); // the space will allow us to consume any whitespace, and then store the actual user input
       if (selection == 'Y' || selection == 'y')
       {
-        scanf("%d", &selection);
         printf("Please enter the student's new grade: ");
         scanf("%lf", &studentArray[i].grade);
         while (studentArray[i].grade < 0.0 || studentArray[i].grade > 100.0) // if grade goes out of bounds
@@ -120,8 +116,6 @@ void updateStudent()
           scanf("%lf", &studentArray[i].grade);
         }
       }
-      else
-        scanf("%d", &selection);
       changeSuccess = 1;
       break;
     }
@@ -173,11 +167,11 @@ void deleteStudent(){
   int studentID;
   //prints empty if there are no students
   if (size == 0) {
-    printf("gradebook is empty.\n");
+    printf("Gradebook is empty.\n");
     return;
   }
 
-  printf("Enter the student's ID you want to delete");
+  printf("Enter the student's ID you want to delete: ");
   scanf("%d", &studentID);
 
   while (studentID < 0) {
