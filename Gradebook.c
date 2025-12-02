@@ -96,11 +96,11 @@ void updateStudent()
       // Ask user if they would like to change the student's name
       printf("Would you like to change the student's name? Enter [Y/N]: ");
       scanf("%d", &selection);
-      if (selection = 'Y' || selection == 'y')
+      if (selection == 'Y' || selection == 'y')
       {
         scanf("%d", &selection);
         printf("Please enter the student's new name: ");
-        scanf(" %127[^\n]", &studentArray[i].name);
+        scanf(" %127[^\n]", studentArray[i].name);
       }
       else
         scanf("%d", &selection);
@@ -108,7 +108,7 @@ void updateStudent()
       // Ask the user if they would like to change the student's grade
       printf("Would you like to change the student's grade? Enter [Y/N]: ");
       scanf("%d", &selection);
-      if (selection = 'Y' || selection == 'y')
+      if (selection == 'Y' || selection == 'y')
       {
         scanf("%d", &selection);
         printf("Please enter the student's new grade: ");
@@ -168,7 +168,7 @@ void findStudent()
   }
 }
 
-// 4. deleting a student
+// 4. Deleting a student
 void deleteStudent(){
   int studentID;
   //prints empty if there are no students
