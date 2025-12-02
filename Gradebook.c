@@ -85,7 +85,7 @@ void updateStudent()
   }
   
   // Search for user through the list
-  int selection = 'x';
+  char selection = 'x';
   int changeSuccess = 0;
   for (int i = 0; i < size; i++)
   {
@@ -95,18 +95,22 @@ void updateStudent()
      
       // Ask user if they would like to change the student's name
       printf("Would you like to change the student's name? Enter [Y/N]: ");
-      scanf("%d", &selection);
-      if (selection = 'Y' || selection == 'y')
+      scanf("%c", &selection);
+      if (selection == 'Y' || selection == 'y')
       {
+        scanf("%c", &selection); // this is to eat the enter in the buffer
         printf("Please enter the student's new name: ");
         scanf(" %127[^\n]", &studentArray[i].name);
       }
+      else
+        scanf("%c", &selection); // eat the enter in the buffer regardless
 
       // Ask the user if they would like to change the student's grade
       printf("Would you like to change the student's grade? Enter [Y/N]: ");
-      scanf("%d", &selection);
-      if (selection = 'Y' || selection == 'y')
+      scanf("%c", &selection);
+      if (selection == 'Y' || selection == 'y')
       {
+        scanf("%c", &selection);
         printf("Please enter the student's new grade: ");
         scanf("%lf", &studentArray[i].grade);
         while (studentArray[i].grade < 0.0 || studentArray[i].grade > 100.0) // if grade goes out of bounds
@@ -116,6 +120,8 @@ void updateStudent()
           scanf("%lf", &studentArray[i].grade);
         }
       }
+      else
+        scanf("%c", &selection);
       changeSuccess = 1;
       break;
     }
