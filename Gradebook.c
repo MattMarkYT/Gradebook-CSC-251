@@ -228,6 +228,7 @@ void setGradebook(int s, Student* newStudents)
       studentArray[i].ID = newStudents[i].ID;
       studentArray[i].grade = newStudents[i].grade;
   }
+}
 
 Student* getGradebook(){
   static Student sendArray[GRADEBOOK_CAPACITY];
