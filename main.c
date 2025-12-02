@@ -10,7 +10,7 @@ void printMenu(void);
 int main(void) {
     int usersChoice = -1;
 
-//	Load();   /* loads the data */
+	load();   /* loads the data */
 
 	while (usersChoice != 0) {
 
