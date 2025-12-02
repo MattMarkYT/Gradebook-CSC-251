@@ -218,19 +218,30 @@ void listStudents()
 
 /* Setting and Getting Gradebook */
 
-/* THIS IS INCOMPLETE, NEED TO WORK ON IT
 void setGradebook(int s, Student* newStudents)
 {
   size = s;
   // The gradebook has at least one student inside
   for (int i = 0; i < size; i++)
   {
-      studentArray[i].name = newStudents[i].name;
+      strcpy(studentArray[i].name, newStudents[i].name);
       studentArray[i].ID = newStudents[i].ID;
       studentArray[i].grade = newStudents[i].grade;
   }
 
+Student* getGradebook(){
+  static Student sendArray[GRADEBOOK_CAPACITY];
+
 Student* getGradebook();
+  for (int i = 0; i < size; i++){
+    sendArray[i].ID = studentArray[i].ID;
+    strcpy(sendArray[i].name, studentArray[i].name);
+    sendArray[i].grade = studentArray[i].grade;
+  }
+
+  return sendArray;
+
+}
 
 
 // Gets the size of the gradebook
@@ -238,7 +249,6 @@ int getSize()
 {
   return size;
 } 
-*/
 
 
 
