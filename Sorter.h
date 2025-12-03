@@ -1,5 +1,5 @@
 
-/* uses insertion sort or selection sort to sort the students in a method chosen beforehand
- takes in an array and a key of int */
+/* calls an array, uses insertion sort to sort the students alphabetically using custom comparator
+it than saves it into the array */
 void sort();
 
