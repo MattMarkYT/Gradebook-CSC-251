@@ -6,7 +6,7 @@
 void save(){
 	Student* stuArray = getGradebook();					// Get students from gradebook
 	int size = getSize();									// Get size of gradebook
-	Student *buffer = malloc(sizeof(Student) * size); 		// Only allocate needed space
+	Student buffer[size]; 									// Only allocate needed space
 
 	for (int i = 0; i < size; i++){							// For each element...
 		buffer[i] = stuArray[i];							// Copy data into buffer
@@ -15,9 +15,7 @@ void save(){
 
 	FILE *gradebookFile = fopen("Gradebook.save","w");		// Create/open gradebook file
 	fwrite(&size, sizeof(int), 1, gradebookFile);			// Write size to file
-	fwrite(buffer, sizeof(Student), size, gradebookFile);	// Write students to file
-
-	free(buffer);
+	fwrite(&buffer, sizeof(Student), size, gradebookFile);	// Write students to file
 
 	fclose(gradebookFile);
 
