@@ -17,6 +17,8 @@ void save(){
 	fwrite(&size, sizeof(int), 1, gradebookFile);			// Write size to file
 	fwrite(buffer, sizeof(Student), size, gradebookFile);	// Write students to file
 
+	free(buffer);
+
 	fclose(gradebookFile);
 
 }
